@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-02-24T18:25:15 IST" name="Default suite" finished-at="2022-02-24T18:25:43 IST" duration-ms="27968">
+    <groups>
+    </groups>
+    <test started-at="2022-02-24T18:25:15 IST" name="Default test" finished-at="2022-02-24T18:25:43 IST" duration-ms="27968">
+      <class name="MINI.PROJECT.GoogleProject">
+        <test-method is-config="true" signature="driverSetup()[pri:0, instance:MINI.PROJECT.GoogleProject@550dbc7a]" started-at="2022-02-24T18:25:15 IST" name="driverSetup" finished-at="2022-02-24T18:25:25 IST" duration-ms="10085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverSetup -->
+        <test-method signature="printurl()[pri:1, instance:MINI.PROJECT.GoogleProject@550dbc7a]" started-at="2022-02-24T18:25:25 IST" name="printurl" finished-at="2022-02-24T18:25:26 IST" duration-ms="864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- printurl -->
+        <test-method signature="searchoptionsdisplayed()[pri:2, instance:MINI.PROJECT.GoogleProject@550dbc7a]" started-at="2022-02-24T18:25:26 IST" name="searchoptionsdisplayed" finished-at="2022-02-24T18:25:27 IST" duration-ms="1213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchoptionsdisplayed -->
+        <test-method signature="screenshotoftheoptionsdisplayed()[pri:3, instance:MINI.PROJECT.GoogleProject@550dbc7a]" started-at="2022-02-24T18:25:27 IST" name="screenshotoftheoptionsdisplayed" finished-at="2022-02-24T18:25:28 IST" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- screenshotoftheoptionsdisplayed -->
+        <test-method signature="enter()[pri:4, instance:MINI.PROJECT.GoogleProject@550dbc7a]" started-at="2022-02-24T18:25:28 IST" name="enter" finished-at="2022-02-24T18:25:30 IST" duration-ms="2436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enter -->
+        <test-method signature="numberofsearchresults()[pri:5, instance:MINI.PROJECT.GoogleProject@550dbc7a]" started-at="2022-02-24T18:25:30 IST" name="numberofsearchresults" finished-at="2022-02-24T18:25:30 IST" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- numberofsearchresults -->
+        <test-method signature="fullpagescreenshotofsearchresultspage()[pri:6, instance:MINI.PROJECT.GoogleProject@550dbc7a]" started-at="2022-02-24T18:25:30 IST" name="fullpagescreenshotofsearchresultspage" finished-at="2022-02-24T18:25:39 IST" duration-ms="8627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fullpagescreenshotofsearchresultspage -->
+        <test-method is-config="true" signature="Closethebrowser()[pri:0, instance:MINI.PROJECT.GoogleProject@550dbc7a]" started-at="2022-02-24T18:25:39 IST" name="Closethebrowser" finished-at="2022-02-24T18:25:43 IST" duration-ms="4534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Closethebrowser -->
+      </class> <!-- MINI.PROJECT.GoogleProject -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
