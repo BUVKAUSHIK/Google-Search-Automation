@@ -1,205 +1,158 @@
 # Google Search Automation
 
-An automation project for Google Search functionality using web automation tools and scripting.
+> An automation project for Google Search functionality using web automation tools and scripting.
 
-## 🎯 Purpose
-
-This project demonstrates automated testing and interaction with Google Search functionality, including:
-- Automated search queries
-- Result extraction and analysis
-- Web automation workflows
-- Search behavior testing
-
-## ⚙️ Technologies
-
-| Technology | Purpose |
-|---|---|
-| **Selenium** | Browser automation |
-| **Python** | Scripting and automation logic |
-| **Google Search API** | Search integration |
-| **HTML/CSS** | Web scraping and parsing |
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Python 3.7+
-- Selenium WebDriver
-- Google Chrome browser
-- ChromeDriver compatible with your Chrome version
-
-### Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/BUVKAUSHIK/Google-Search-Automation.git
-cd Google-Search-Automation
-```
-
-2. **Install dependencies**
-```bash
-pip install -r requirements.txt
-```
-
-3. **Download ChromeDriver**
-- Download from: https://chromedriver.chromium.org/
-- Place in your PATH or project directory
-
-### Basic Usage
-
-```python
-from google_search_automation import GoogleSearchAutomation
-
-# Initialize the automation
-automator = GoogleSearchAutomation()
-
-# Perform a search
-results = automator.search("your query here")
-
-# Process results
-for result in results:
-    print(result.title)
-    print(result.url)
-    print(result.description)
-```
-
-## 📁 Project Structure
-
-```
-Google-Search-Automation/
-├── README.md
-├── requirements.txt
-├── config/
-│   └── settings.py         # Configuration settings
-├── src/
-│   ├── __init__.py
-│   ├── automation.py       # Main automation class
-│   ├── search.py          # Search functionality
-│   └── utils.py           # Utility functions
-├── tests/
-│   └── test_automation.py  # Test suite
-└── examples/
-    └── basic_example.py    # Usage example
-```
-
-## 🔑 Key Features
-
-- **Automated Search**: Automate Google Search queries programmatically
-- **Result Extraction**: Extract and parse search results
-- **Error Handling**: Robust error handling and retry mechanisms
-- **Configurable**: Easy configuration for different use cases
-- **Headless Mode**: Optional headless browser operation
-
-## 💻 Usage Examples
-
-### Simple Search
-```python
-automator = GoogleSearchAutomation()
-results = automator.search("Python tutorial")
-print(f"Found {len(results)} results")
-```
-
-### Advanced Search with Filters
-```python
-results = automator.search(
-    query="machine learning",
-    language="en",
-    region="US",
-    num_results=10
-)
-```
-
-### Save Results to File
-```python
-automator.search_and_save(
-    query="web development",
-    output_file="results.json"
-)
-```
-
-## ⚙️ Configuration
-
-Edit `config/settings.py` to customize:
-- Browser type (Chrome, Firefox, etc.)
-- Headless mode settings
-- Timeout values
-- Retry attempts
-- Output formats
-
-## 🧪 Testing
-
-Run the test suite:
-```bash
-pytest tests/
-```
-
-Or with coverage:
-```bash
-pytest --cov=src tests/
-```
-
-## 🚨 Best Practices
-
-1. **Respect Rate Limits**: Add delays between requests
-2. **Use Headless Mode**: For better performance in automated environments
-3. **Error Handling**: Wrap searches in try-except blocks
-4. **User-Agent**: Rotate user agents to avoid detection
-5. **Cleanup**: Always close browser sessions properly
-
-## ⚠️ Important Notes
-
-- **Terms of Service**: Ensure compliance with Google's Terms of Service
-- **Rate Limiting**: Implement appropriate delays between requests
-- **Legal Compliance**: Use for legitimate automation purposes only
-- **IP Blocking**: Be aware of IP blocking due to excessive requests
-
-## 🔧 Troubleshooting
-
-### ChromeDriver Not Found
-```bash
-# Add ChromeDriver to PATH or specify the path
-automator = GoogleSearchAutomation(chromedriver_path="/path/to/chromedriver")
-```
-
-### Connection Timeout
-```python
-automator = GoogleSearchAutomation(timeout=30)  # Increase timeout
-```
-
-### JavaScript Not Loading
-```python
-automator = GoogleSearchAutomation(wait_for_javascript=True)
-```
-
-## 📚 Resources
-
-- [Selenium Documentation](https://selenium.dev/documentation/)
-- [ChromeDriver Downloads](https://chromedriver.chromium.org/)
-- [Google Search API](https://developers.google.com/custom-search/v1)
-- [Python Web Scraping Guide](https://docs.python-requests.org/)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Add tests for new functionality
-4. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## ⚖️ Disclaimer
-
-This tool is for educational and authorized testing purposes only. Users are responsible for ensuring compliance with Google's Terms of Service and applicable laws. Excessive automated requests may result in IP blocking.
-
-## 📧 Support
-
-For issues or questions:
-- Open an issue on GitHub
-- Check existing documentation
-- Review test cases for usage patterns
+![Python](https://img.shields.io/badge/Python-3.7+-blue?logo=python&logoColor=white)
+![Selenium](https://img.shields.io/badge/Selenium-Automation-green?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iI2ZmZiIgdmlld0JveD0iMCAwIDE2IDE2Ij8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEyIDRWM0gxLjV2Ni41VjExaDIuNXYtM2g1YTEgMSAwIDAgMSAxIDF2My41aDIuNVY3LjVBNC41IDQuNSAwIDAgMCAxMiA0eiIvPjwvc3ZnPg==&logoColor=green)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
 
-**Built for automation and testing of Google Search functionality**
+## Table of Contents
+
+- [Overview](#overview)
+- [Architecture Diagram](#architecture-diagram)
+- [Core Workflow](#core-workflow)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Best Practices](#best-practices)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Disclaimer](#disclaimer)
+
+---
+
+## Overview
+
+Google Search Automation is a Python-based tool that automates web interactions with Google Search using Selenium WebDriver. It enables programmatic search queries, result extraction, and analysis while incorporating robust error handling and configurable options for headless operation.
+
+---
+
+## Architecture Diagram
+
+```text
++------------------------+
+|   User Configuration   |
+|   (Query, Options)     |
++------------------------+
+           |
+           v
++------------------------+
+|    Python Script       |
+|   (Main Entry Point)   |
++------------------------+
+           |
+           v
++------------------------+
+|   Selenium WebDriver   |
+|   (Chrome/Firefox)     |
++------------------------+
+           |
+           v
++------------------------+
+|   Google Search Page   |
+|   (Search Input)       |
++------------------------+
+           |
+           v
++------------------------+
+|   Results Extraction   |
+|   (HTML/CSS Parsing)   |
++------------------------+
+           |
+           v
++------------------------+
+|  Data Output / Logs    |
+|  (CSV, JSON, Console)  |
++------------------------+
+```
+
+---
+
+## Core Workflow
+
+1. **Initialize Browser** - Launch Chrome/Firefox in normal or headless mode
+2. **Navigate to Google** - Open the Google Search homepage
+3. **Submit Query** - Input search terms and trigger the search
+4. **Wait & Load** - Allow results to fully render with configurable delays
+5. **Parse Results** - Extract titles, URLs, snippets from SERPs
+6. **Store & Analyze** - Save results to file or process in real-time
+7. **Cleanup** - Close browser and release resources
+
+---
+## Key Features
+
+| Feature | Description |
+| :--- | :--- |
+| **Automated Search** | Execute Google searches programmatically without manual input |
+| **Result Extraction** | Parse and extract titles, URLs, and snippets from SERPs |
+| **Headless Mode** | Run browser automation in headless mode for CI/CD pipelines |
+| **Error Handling** | Robust retry mechanisms and exception handling |
+| **Configurable** | Customize delays, headless mode, and output format |
+| **Multi-format Output** | Export results as CSV, JSON, or console output |
+
+---
+
+## Tech Stack
+
+| Technology | Purpose | Version |
+| :--- | :--- | :--- |
+| **Python** | Core scripting and automation logic | 3.7+ |
+| **Selenium** | Browser automation and web interaction | Latest |
+| **ChromeDriver** | WebDriver for Chrome browser | Compatible |
+| **BeautifulSoup** (optional) | HTML parsing and data extraction | 4.x |
+| **pandas** (optional) | Data manipulation and export | Latest |
+| **HTML/CSS** | Web scraping selectors and parsing | N/A |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Python 3.7 or higher
+- Google Chrome browser
+- ChromeDriver (matching your Chrome version)
+- pip (Python package manager)
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/BUVKAUSHIK/Google-Search-Automation.git
+cd Google-Search-Automation
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Download ChromeDriver
+# Visit: https://chromedriver.chromium.org/downloads
+# Place chromedriver in your system PATH or project directory
+
+# 4. (Optional) Install additional packages
+pip install beautifulsoup4 pandas
+```
+
+### Quick Start
+
+```python
+from google_search import SearchAutomation
+
+# Initialize the automation tool
+search = SearchAutomation(headless=True)
+
+# Run a search
+results = search.query("Python automation tools")
+
+# Display results
+for result in results:
+    print(f"Title: {result['title']}")
+    print(f"URL: {result['url']}\n")
+
+# Save to file
+search.export_to_csv("results.csv")
+```
+
+---
